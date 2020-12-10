@@ -77,14 +77,14 @@ module.exports = {
             if (!results) {
                 return res.json({
                     success: 0,
-                    data: "Số điện thoại hoặc mật khẩu không hợp lệ"
+                    message: "Số điện thoại hoặc mật khẩu không hợp lệ"
                 });
             }
             else {
                 if (results.Status == 0) {
                     return res.json({
                         success: 2,
-                        data: "Tài khoản của bạn đã bị khoá"
+                        message: "Tài khoản của bạn đã bị khoá"
                     });
                 }
 
@@ -100,7 +100,7 @@ module.exports = {
                 } else {
                     return res.json({
                         success: 0,
-                        data: "Số điện thoại hoặc mật khẩu không hợp lệ"
+                        message: "Số điện thoại hoặc mật khẩu không hợp lệ"
                     });
                 }
             }
